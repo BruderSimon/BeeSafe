@@ -1,6 +1,45 @@
 
 * BeeSafe: A Point & Click Game i guess
 
-The Game is pretty simple: You have to Protect the Bees, while they
-are collecting the Nectar of the Flowers.  The Enemies are Wasps which
+The Game: You have to Protect the Bees, while they
+are collecting the Nectar of the Flowers. The Enemies are Wasps which
 wants to attack the Bees.
+
+The Gameplay is quite Simple: Take down the Wasps before they take
+down the Bees. You can take the Wasps down by clicking on them, but
+bee aware, if only one Bee is taken down, you lose.
+
+** Problems
+There are few problems, that I need to figure out.
+1. All wasps stop for a split second, when a new one spawed
+
+2. Memory Management has to be Optimized!
+
+3. The Score has to be Displayed
+
+** Dependencies
+The Project uses
+- GLFW 3.3.8 https://www.glfw.org/
+
+- GLEW 2.2.0 https://github.com/nigels-com/glew
+
+- GLM 0.9.9.8 https://github.com/g-truc/glm
+
+- stdb_image.h https://github.com/nothings/stb
+
+** If you want to play it for your selfe
+#+begin_src
+cmake -G <Your Compiler> -S <../src/> -B <../build/>
+
+cmake --build <../build/>
+#+end_src
+
+The Executeable will be copied to the src directory. There you can
+execute it. The Executeable searchers the shader and resource
+directory in the same directory where it is located.
+So for example:
+--src
+  |
+  |-BeeSafe.exe
+  |-shader/
+  |-res/
