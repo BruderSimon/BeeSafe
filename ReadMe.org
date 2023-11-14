@@ -50,9 +50,9 @@ So for example:
   |  |  +--SimpleVertexshader.vertexshader
   |  |  +--SimpleFragmentshader.fragmentshader
   |  +-- res  	   
-  |  |  +--Bee.png 
-  |  |	+--Wasp.png
-  |  |	+--Flower.png
-  |  |	+--Menu.png 
+  |  |    +--Bee.png 
+  |  |	  +--Wasp.png
+  |  |	  +--Flower.png
+  |  |	  +--Menu.png 
 #+end_src	   
 		   
