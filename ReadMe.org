@@ -38,8 +38,21 @@ The Executeable will be copied to the src directory. There you can
 execute it. The Executeable searchers the shader and resource
 directory in the same directory where it is located.
 So for example:
---src
+
+#+name: tree
+#+begin_src ditaa
+  BeeSafe      
   |
-  |-BeeSafe.exe
-  |-shader/
-  |-res/
+  +--build
+  |   
+  +--src   	   
+  |  +--shader	   
+  |  |  +--SimpleVertexshader.vertexshader
+  |  |  +--SimpleFragmentshader.fragmentshader
+  |  +-- res  	   
+  |  |  +--Bee.png 
+  |  |	+--Wasp.png
+  |  |	+--Flower.png
+  |  |	+--Menu.png 
+#+end_src	   
+		   
