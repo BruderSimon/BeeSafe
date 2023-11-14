@@ -1,0 +1,6 @@
+
+* BeeSafe: A Point & Click Game i guess
+
+The Game is pretty simple: You have to Protect the Bees, while they
+are collecting the Nectar of the Flowers.  The Enemies are Wasps which
+wants to attack the Bees.
