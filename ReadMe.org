@@ -27,7 +27,7 @@ The Project uses
 
 - stdb_image.h https://github.com/nothings/stb
 
-** If you want to play it for your selfe
+** If you want to play it for your self
 #+begin_src
 cmake -G <Your Compiler> -S <../src/> -B <../build/>
 
