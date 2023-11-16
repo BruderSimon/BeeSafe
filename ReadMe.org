@@ -1,5 +1,5 @@
 
-* BeeSafe: A Point & Click Game i guess
+* BeeSafe: A Point & Click Game I guess
 
 The Game: You have to Protect the Bees, while they
 are collecting the Nectar of the Flowers. The Enemies are Wasps which
@@ -9,9 +9,12 @@ The Gameplay is quite Simple: Take down the Wasps before they take
 down the Bees. You can take the Wasps down by clicking on them, but
 bee aware, if only one Bee is taken down, you lose.
 
+The Game was made while following the Tutorial on:
+http://www.opengl-tutorial.org/ and https://learnopengl.com/
+
 ** Problems
 There are few problems, that I need to figure out.
-1. All wasps stop for a split second, when a new one spawed
+1. All wasps stop for a split second, when a new one spawned
 
 2. Memory Management has to be Optimized!
 
@@ -34,8 +37,8 @@ cmake -G <Your Compiler> -S <../src/> -B <../build/>
 cmake --build <../build/>
 #+end_src
 
-The Executeable will be copied to the src directory. There you can
-execute it. The Executeable searchers the shader and resource
+The Executable will be copied to the src directory. There you can
+execute it. The Executable searchers the shader and resource
 directory in the same directory where it is located.
 So for example:
 
@@ -55,4 +58,4 @@ So for example:
   |  | 	  +--Flower.png
   |  | 	  +--Menu.png 
 #+end_src	   
-		   
+ 		   
