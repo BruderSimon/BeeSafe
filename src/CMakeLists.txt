@@ -2,6 +2,10 @@
 cmake_minimum_required(VERSION 3.5)
 project(BeeSafe)
 
+if (POLICY CMP0070)
+    cmake_policy(SET CMP0070 NEW)
+endif()
+
 # For Clangd langage server
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Packages 
@@ -28,6 +32,8 @@ add_definitions(
 	-DTW_NO_DIRECT3D
 	-DGLEW_STATIC
 	-D_CRT_SECURE_NO_WARNINGS
+	-DGLEW_NO_GLU
+	
 )
 
 # Building the Dependecies
@@ -79,11 +85,35 @@ add_executable(BeeSafe
 target_link_libraries(BeeSafe
   ${ALL_LIBS}
 )
+SOURCE_GROUP(common REGULAR_EXPRESSION ".*/common/.*" )
+SOURCE_GROUP(shaders REGULAR_EXPRESSION ".*/shader/.*" )
+SOURCE_GROUP(res REGULAR_EXPRESSION ".*/res/.*" )
 
+if(${CMAKE_GENERATOR} MATCHES "Visual Studio")
+set(WorkingDIR "${CMAKE_CURRENT_BINARY_DIR}/Debug/")
+if(CMAKE_BUILD_TYPE STREQUAL Release)
+set(WorkingDIR "${CMAKE_CURRENT_BINARY_DIR}/Release/")
+endif()
+add_custom_command(
+         TARGET BeeSafe POST_BUILD
+         COMMAND ${CMAKE_COMMAND} -E copy_directory              
+             ${CMAKE_SOURCE_DIR}/shader ${WorkingDIR}/shader
+         COMMENT "Copying shaders" VERBATIM
+         )
 
+add_custom_command(
+         TARGET BeeSafe POST_BUILD
+         COMMAND ${CMAKE_COMMAND} -E copy_directory              
+             ${CMAKE_SOURCE_DIR}/res ${WorkingDIR}/res
+         COMMENT "Copying res" VERBATIM
+         )
+
+endif()
+if(${CMAKE_GENERATOR} MATCHES MinGW)
 # To Copy the Executeable in the source directory
 # This is nessecary if we have Shaders, that we Include
 		 
-add_custom_command(TARGET BeeSafe 
+add_custom_command(TARGET BeeSafe
                    POST_BUILD
-                   COMMAND ${CMAKE_COMMAND} -E copy "BeeSafe${CMAKE_EXECUTABLE_SUFFIX}" "${CMAKE_SOURCE_DIR}/")
+		   COMMAND ${CMAKE_COMMAND} -E copy "BeeSafe${CMAKE_EXECUTABLE_SUFFIX}" "${CMAKE_SOURCE_DIR}/")
+endif()

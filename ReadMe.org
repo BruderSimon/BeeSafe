@@ -30,17 +30,27 @@ The Project uses
 
 - stdb_image.h https://github.com/nothings/stb
 
-** If you want to play it for your self
+** If you want to Build it for your self
+Either Use the CMake GUI to Generate the Building System or use the Command line with Following command:
 #+begin_src
 cmake -G <Your Compiler> -S <../src/> -B <../build/>
-
-cmake --build <../build/>
 #+end_src
 
-The Executable will be copied to the src directory. There you can
-execute it. The Executable searchers the shader and resource
-directory in the same directory where it is located.
-So for example:
+Then you have to do the Compiling in the Command Line.(until I figured out how to set CMake Properly to work with Visual Studio)
+No worries I will guide you Step by Step
+On Windows go to the ../BeeSafe/src/ Directory and Press Right click onto an Empty space -> Open In Terminal (or Equivalent)
+Then the Terminal should be Opened with the Path Pointing to the src directory.
+Now just copy and execute following command: (You don't have to change anything)
+#+begin_src
+cmake --build ../build/
+#+end_src
+If you are using the Visual Studio Generator (Specified in the CMake GUI or in the commandline) then in the build directory there should be a Debug Folder.
+Inside the Debug folder, you will find the Executable.
+
+If you are using MinGW Makefiles then the Executable will be copied to
+the src directory. There you can execute it. The Executable searchers
+the shader and resource directory in the same directory where it is
+located.  So for example:
 
 #+name: tree
 #+begin_src ditaa
