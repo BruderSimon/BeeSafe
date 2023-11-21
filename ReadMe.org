@@ -40,7 +40,10 @@ Then you have to do the Compiling in the Command Line.(until I figured out how t
 
 No worries I will guide you Step by Step
 
-On Windows go to the ../BeeSafe/src/ Directory and Press Right click onto an Empty space -> Open In Terminal (or Equivalent)
+On Windows 11 you go to the ../BeeSafe/src/ Directory and Press Right click onto an Empty space -> Open In Terminal (or Equivalent)
+
+On Windows 10 you have to go to the Path in the Terminal
+
 Then the Terminal should be Opened with the Path Pointing to the src directory.
 Now just copy and execute following command: (You don't have to change anything)
 #+begin_src
