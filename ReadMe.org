@@ -37,7 +37,9 @@ cmake -G <Your Compiler> -S <../src/> -B <../build/>
 #+end_src
 
 Then you have to do the Compiling in the Command Line.(until I figured out how to set CMake Properly to work with Visual Studio)
+
 No worries I will guide you Step by Step
+
 On Windows go to the ../BeeSafe/src/ Directory and Press Right click onto an Empty space -> Open In Terminal (or Equivalent)
 Then the Terminal should be Opened with the Path Pointing to the src directory.
 Now just copy and execute following command: (You don't have to change anything)
