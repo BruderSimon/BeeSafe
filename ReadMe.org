@@ -1,6 +1,6 @@
 
 * BeeSafe: A Point & Click Game I guess
-
+** A Executable is to located on the right side under Releases 
 The Game: You have to Protect the Bees, while they
 are collecting the Nectar of the Flowers. The Enemies are Wasps which
 wants to attack the Bees.
