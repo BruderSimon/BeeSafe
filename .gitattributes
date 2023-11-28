@@ -1,1 +1,1 @@
-src\dependencies\* linguist-vendored
+/src/dependencies/* linguist-vendored
